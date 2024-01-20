@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:{{> projectName }}/ui/widgets/layout/page_layout.dart';
+
+class {{ properCase name }}Page extends StatelessWidget {
+  {{ properCase name }}Page({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PageLayout(
+      child: Column(
+        children: [
+          Text('{{ properCase name }}Page', style: TextStyle(fontSize: 18.sp)),
+        ],
+      )
+    );
+  }
+}

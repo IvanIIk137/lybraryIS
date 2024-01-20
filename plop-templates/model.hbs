@@ -1,0 +1,16 @@
+class {{ properCase name }}Model {
+  late int id;
+
+  {{ properCase name }}Model.fromMap(Map map) {
+    assert(map['id'] is int);
+
+    id = map['id'];
+  }
+
+  @override
+  String toString() {
+    return '''{{ properCase name }}Model{
+  id: $id,
+}''';
+  }
+}

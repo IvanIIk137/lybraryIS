@@ -1,0 +1,18 @@
+import 'package:get/get.dart';
+import 'package:{{> projectName }}/utils/app_dialog.dart';
+import 'package:{{> projectName }}/data/providers/api_provider.dart';
+
+class {{ properCase name }}Repository {
+  final _apiProvider = Get.find<ApiProvider>();
+
+  Future<void> fetch() async {
+    final res = await _apiProvider.get('/api/test');
+
+    if (res.hasError) {
+      AppDialog.fail(res.statusText);
+      return;
+    }
+
+    // your code
+  }
+}

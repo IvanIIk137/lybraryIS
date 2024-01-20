@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+class {{ properCase name }}Field extends FormField<{{returnType}}> {
+  final String label;
+
+  {{ properCase name }}Field({
+    Key? key,
+    required this.label,
+    FormFieldSetter<{{returnType}}>? onSaved,
+    FormFieldValidator<{{returnType}}>? validator,
+    {{returnType}}? initialValue,
+  }) : super(
+    key: key,
+    onSaved: onSaved,
+    validator: validator,
+    initialValue: initialValue,
+    builder: (state) {
+      return Container();
+    }
+  );
+
+  @override
+  FormFieldState<{{returnType}}> createState() => _{{ properCase name }}FieldState();
+}
+
+class _{{ properCase name }}FieldState extends FormFieldState<{{returnType}}> {
+  @override
+  {{ properCase name }}Field get widget => super.widget as {{ properCase name }}Field;
+
+  @override
+  void didUpdateWidget({{ properCase name }}Field oldWidget) {
+    super.didUpdateWidget(oldWidget);
+  }
+}
